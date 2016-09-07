@@ -1,0 +1,24 @@
+<div ng-init="c.init()">
+
+    <div class="container">
+        <div class="row" style="margin-top:50px">
+            <div class="col-sm-12 white-background">
+                <h1>{{c.practicum.name}}</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 white-background">
+                <table class="table">
+                    <tr>
+                        <th>Naam</th>
+                        <th>Status</th>
+                    </tr>
+                    <tr ng-repeat="practicum_user in c.practicum.practicum_users ">
+                        <td>{{practicum_user.user.name}}</td>
+                        <td>{{practicum_user.status}}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

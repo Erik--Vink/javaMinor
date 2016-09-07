@@ -1,0 +1,26 @@
+<div ng-init="c.init()">
+
+    <div class="container">
+        <div class="row" style="margin-top:50px">
+            <div class="col-sm-12 white-background">
+                <h1>Practicums</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 white-background">
+                <table class="table">
+                    <tr>
+                        <th>Naam</th>
+                        <th>Status</th>
+                        <th></th>
+                    </tr>
+                    <tr ng-repeat="practicum in c.practicums ">
+                        <td>{{practicum.name}}</td>
+                        <td>{{practicum.practicum_users[0].status}}</td>
+                        <td><a class="btn btn-default" ui-sref="practicum({id:practicum._id})">Details</a></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

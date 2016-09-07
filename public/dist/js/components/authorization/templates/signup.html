@@ -1,0 +1,17 @@
+<div id="page-center" ng-init="c.init()">
+    <div class="container">
+        <div class="card card-container">
+            <div id="signup">Sign up</div>
+            <p id="profile-name" class="profile-name-card"></p>
+            <form class="form-signin" ng-submit="c.signUp()">
+
+                <div ng-if="c.error" class="error"><span class="fa fa-warning"></span> {{c.error}}</div>
+
+                <input type="text" id="inputEmail" ng-model="c.user.email" class="form-control" placeholder="Name" required autofocus>
+                <input type="password" id="inputPassword" ng-model="c.user.password" class="form-control" placeholder="Password" required>
+
+                <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Sign up</button>
+            </form>
+        </div>
+    </div>
+</div>

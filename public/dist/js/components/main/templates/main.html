@@ -1,0 +1,47 @@
+<div ng-init="c.init()">
+
+    <side-menu position="'right'"></side-menu>
+    <div full-page options="c.pageOptions">
+        <div class="section intro active"></div>
+        <div class="section">Some section</div>
+        <div class="section">Some section</div>
+        <div class="section" ng-controller="DateController as dc" ng-init="dc.init()">
+            <div id="page-center">
+                <div class="container">
+                    <div class="date-container">
+                        <ul class="ch-grid">
+                            <li>
+                                <div class="ch-item ch-img-1">
+                                    <div class="ch-front">{{dc.date.years}}</div>
+                                    <div class="ch-info">
+                                        <h3>{{dc.date.years}} jaar samen</h3>
+                                        <p><span class="fa fa-heart"></span></p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="ch-item ch-img-2">
+                                    <div class="ch-front">{{dc.date.months}}</div>
+                                    <div class="ch-info">
+                                        <h3>{{dc.date.months}} keer de dertiende van de maand </h3>
+                                        <p><span class="fa fa-heart"></span></p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="ch-item ch-img-3">
+                                    <div class="ch-front">{{dc.date.days}}</div>
+                                    <div class="ch-info">
+                                        <h3>en {{dc.date.days}} <span ng-if="dc.date.months != 1">dagen</span><span ng-if="dc.date.months == 1">dag</span> alweer</h3>
+                                        <p><span class="fa fa-heart"></span></p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section">Some section</div>
+    </div>
+</div>

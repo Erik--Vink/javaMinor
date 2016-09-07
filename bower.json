@@ -1,0 +1,11 @@
+{
+  "name": "labtracker",
+  "version": "0.0.0",
+  "authors": [
+    "Erik Vink"
+  ],
+  "description": "",
+  "dependencies": {
+    "fullpage.js": "~2.7.7"
+  }
+}

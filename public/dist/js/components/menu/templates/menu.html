@@ -1,0 +1,9 @@
+<div ng-init="vm.init()" class="menu {{vm.position}}">
+    <ul class="menu-container">
+        <li ng-repeat="menuItem in vm.menuItems" class="menu-item color-{{$index + 1}}" data-menuanchor="{{menuItem.url}}">
+            <span class="fa fa-{{menuItem.icon}}"></span>
+            <div class="overlay"></div>
+        </li>
+    </ul>
+</div>
+
