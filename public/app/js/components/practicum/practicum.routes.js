@@ -1,7 +1,7 @@
 module.exports = function($stateProvider) {
     $stateProvider
         .state('practicums', {
-            url: '/',
+            url: '/practicums',
             templateUrl: 'dist/js/components/practicum/templates/practicums.html',
             controller: 'PracticumController as c'
         })

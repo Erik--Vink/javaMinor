@@ -1,8 +1,9 @@
-module.exports = function(PracticumService){
+module.exports = function(PracticumService, AuthorizationService){
     var self = this;
 
     self.init = function(){
-        self.practicums = PracticumService.getPracticums(2072640);
+        console.log(AuthorizationService.getUser());
+        self.practicums = PracticumService.getPracticums(AuthorizationService.getUser());
     };
 
 };

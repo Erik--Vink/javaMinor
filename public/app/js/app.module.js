@@ -7,10 +7,12 @@ require('angular-permission');
 
 var app = angular.module('app', [
     'app.core',
+    'app.authorization',
     'app.practicum'
 ]);
 
 require("./config/core.module");
+require("./components/authorization/authorization.module");
 require("./components/practicum/practicum.module");
 
 // app.config(function ($httpProvider, $urlRouterProvider) {
