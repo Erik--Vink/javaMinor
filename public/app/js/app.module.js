@@ -20,19 +20,15 @@ require("./components/practicum/practicum.module");
 //     $urlRouterProvider.deferIntercept();//intercept the default route change (so the permissions in the run method can be loaded before a state change event takes place)
 // });
 
-app.run(function() {
+app.run(function(AuthorizationService, $state, $rootScope) {
 
-    // AuthorizationService.isLoggedIn()
-    //     .then(function(isLoggedIn){
-    //         PermPermissionStore.definePermission('user', function(){
-    //             return isLoggedIn;
-    //         });
-    //     })
-    //     .then(function(){
-    //         // Once permissions are set-up
-    //         // kick-off router and start the application rendering
-    //         $urlRouter.sync();
-    //         // Also enable router to listen to url changes
-    //         $urlRouter.listen();
-    //     });
+    $rootScope.$on("$stateChangeStart",
+        function (event, toState, toParams, fromState, fromParams) {
+            if(!AuthorizationService.getUser() || AuthorizationService.getUser() == "null"){
+                $state.go("login");
+                event.preventDefault();
+            }
+        });
+
+
 });
