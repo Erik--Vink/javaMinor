@@ -22,13 +22,13 @@ require("./components/practicum/practicum.module");
 
 app.run(function(AuthorizationService, $state, $rootScope) {
 
-    $rootScope.$on("$stateChangeStart",
-        function (event, toState, toParams, fromState, fromParams) {
-            if(!AuthorizationService.getUser() || AuthorizationService.getUser() == "null"){
-                $state.go("login");
-                event.preventDefault();
-            }
-        });
+    //$rootScope.$on("$stateChangeStart",
+    //    function (event, toState, toParams, fromState, fromParams) {
+    //        if(!AuthorizationService.getUser() || AuthorizationService.getUser() == "null"){
+    //            $state.go("login");
+    //            event.preventDefault();
+    //        }
+    //    });
 
 
 });
