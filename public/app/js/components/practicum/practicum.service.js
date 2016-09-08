@@ -19,6 +19,6 @@ module.exports = function(ResourceService, serviceBase){
     }
 
     function update(practicumuser) {
-        return ResourceService(serviceBase+'practicum_user/'+practicumuser._id).create(practicumuser);
+        return ResourceService(serviceBase+'practicum_user/'+practicumuser._id).update(practicumuser);
     }
 };

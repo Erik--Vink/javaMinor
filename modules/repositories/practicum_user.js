@@ -30,7 +30,7 @@ function one(req, res, next){
 
 
 function update(req, res, next){
-
+    console.log(req.body);
     PracticumUser.findOneAndUpdate({_id: req.params.id}, {$set: req.body}, function (err, data) {
         if(err) { return next(err); }
         handler.found(data, res, function (data) {

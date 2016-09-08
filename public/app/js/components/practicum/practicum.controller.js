@@ -6,5 +6,10 @@ module.exports = function(PracticumService, AuthorizationService){
         self.practicums = PracticumService.getPracticums(AuthorizationService.getUser());
     };
 
+    self.updateQuestion = function(practicumuser){
+        PracticumService.update(practicumuser)
+    };
+
+
 };
 
