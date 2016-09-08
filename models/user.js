@@ -4,7 +4,8 @@ function init(mongoose) {
         {
             number: {type: Number, required: true },
             name: {type: String, required: true },
-            role: {type: String, enum: ['student', 'docent'], required: true}
+            role: {type: String, enum: ['student', 'docent'], required: true},
+            class: { type: mongoose.Schema.Types.ObjectId, ref: "Group"}
         });
 
     mongoose.model('User', userSchema);
