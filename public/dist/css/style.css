@@ -40,4 +40,7 @@ body, html {
 .statuses :not(selected) {
   color: silver; }
 
+.table-rows:hover {
+  background-color: #F2F2F2; }
+
 /*# sourceMappingURL=style.css.map */
