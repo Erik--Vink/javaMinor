@@ -1,7 +1,8 @@
 module.exports = function(ResourceService, serviceBase){
     return {
         getPracticums: getPracticums,
-        getPracticum: getPracticum
+        getPracticum: getPracticum,
+        getUser: getUser
     };
 
     function getPracticums(number) {
@@ -10,5 +11,9 @@ module.exports = function(ResourceService, serviceBase){
 
     function getPracticum(id, number) {
         return ResourceService(serviceBase+'practicum/'+ id).get({number: number});
+    }
+
+    function  getUser(id) {
+        return ResourceService(serviceBase+'user/'+ id).get({number: id});
     }
 };

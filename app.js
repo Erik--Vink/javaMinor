@@ -19,10 +19,11 @@ var err = require('./modules/errors');
 var userRepository = require('./modules/repositories/user')(mongoose);
 var practicumRepository = require('./modules/repositories/practicum')(mongoose);
 var practicumUserRepository = require('./modules/repositories/practicum_user')(mongoose);
+var groupRepository = require("./modules/repositories/group")(mongoose);
 
 
 //routes
-var api = require('./routes/api')(userRepository, practicumRepository, practicumUserRepository);
+var api = require('./routes/api')(userRepository, practicumRepository, practicumUserRepository,groupRepository);
 
 //Start the app
 var app = express();

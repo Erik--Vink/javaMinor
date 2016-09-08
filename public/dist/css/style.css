@@ -35,4 +35,9 @@ body, html {
 .white-background {
   background: white; }
 
+.statuses .selected {
+  color: green; }
+.statuses :not(selected) {
+  color: #95A4A7; }
+
 /*# sourceMappingURL=style.css.map */

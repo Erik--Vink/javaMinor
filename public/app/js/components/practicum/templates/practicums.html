@@ -16,12 +16,11 @@
                     </tr>
                     <tr ng-repeat="practicum in c.practicums ">
                         <td>{{practicum.name}}</td>
-                        <td>{{practicum.practicum_users[0].status}}</td>
-                        <td>
-                            <span class="fa fa-user" ng-class="{selected: practicum.practicum_users[0].status == 'open'}"></span>
-                            <span class="fa fa-user" ng-class="{selected: practicum.practicum_users[0].status == 'in_progress'}"></span>
-                            <span class="fa fa-user" ng-class="{selected: practicum.practicum_users[0].status == 'open'}"></span>
-                            <span class="fa fa-user" ng-class="{selected: practicum.practicum_users[0].status == 'open'}"></span>
+                        <td class="statuses">
+                            <span class="fa fa-battery-empty" ng-class="{selected: practicum.practicum_users[0].status == 'open'}"></span>
+                            <span class="fa fa-battery-half" ng-class="{selected: practicum.practicum_users[0].status == 'in_progress'}"></span>
+                            <span class="fa fa-battery-full" ng-class="{selected: practicum.practicum_users[0].status == 'closed'}"></span>
+                            <span class="fa fa-question" ng-class="{selected: practicum.practicum_users[0].status == 'need_help'}"></span>
                         </td>
                         <td><a class="btn btn-default" ui-sref="practicum({id:practicum._id})">Details</a></td>
                     </tr>

@@ -9,6 +9,7 @@ function init(mongoose) {
     require('../models/user')(mongoose);
     require('../models/practicum')(mongoose);
     require('../models/practicum_user')(mongoose);
+    require('../models/group')(mongoose);
 }
 
 var exp = {};

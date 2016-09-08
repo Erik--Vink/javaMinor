@@ -12,6 +12,28 @@ function all(req, res, next) {
     });
 }
 
+function one(req, res, next){
+
+    var query = {};
+
+    if(req.query.number){
+
+        User.find({number : req.query.number}).exec(function (err, user) {
+
+            if(err){return next(err);}
+            if(user[0]){
+                return user[0];
+            }
+            else{
+                res.status(404).json({ "msg": "Het nummer bestaat niet"});
+            }
+        });
+    }
+    else{
+        res.status(404).json({ "msg": "Geen nummer meegegeven"});
+    }
+}
+
 function remove(req,res,next){
 
     //remove area

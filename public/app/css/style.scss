@@ -43,3 +43,12 @@ body, html {
   background: white;
 }
 
+.statuses{
+  .selected{
+    color:green;
+  }
+  :not(selected){
+    color: #95A4A7;
+  }
+}
+

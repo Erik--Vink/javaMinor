@@ -13,7 +13,7 @@
                         <th>Naam</th>
                         <th>Status</th>
                     </tr>
-                    <tr ng-repeat="practicum_user in c.practicum.practicum_users ">
+                    <tr ng-repeat="practicum_user in c.practicum.practicum_users | filter: user.group">
                         <td>{{practicum_user.user.name}}</td>
                         <td>{{practicum_user.status}}</td>
                     </tr>
