@@ -1,4 +1,5 @@
 @import "colors";
+@import "login";
 
 body, html {
   height: 100%;
@@ -50,5 +51,8 @@ body, html {
   :not(selected){
     color: silver;
   }
+}
+.table-rows:hover{
+  background-color:#F2F2F2;
 }
 

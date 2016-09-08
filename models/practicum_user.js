@@ -3,7 +3,8 @@ function init(mongoose){
         {
             practicum: { type: mongoose.Schema.Types.ObjectId, ref: "Practicum" },
             user: { type: mongoose.Schema.Types.ObjectId, ref: "User" },
-            status: {type: String, enum: ['open', 'closed', 'in_progress', 'need_help'], required: true}
+            status: {type: String, enum: ['open', 'closed', 'in_progress'], required: true},
+            question: {type: String}
         });
 
     mongoose.model('PracticumUser', practicumUserSchema);
