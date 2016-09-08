@@ -18,10 +18,10 @@
                     <tr class="table-rows" ng-repeat="practicum in c.practicums">
                         <td>{{practicum.name}}</td>
                         <td class="statuses">
-                            <span class="fa fa-battery-empty" ng-class="{selected: practicum.practicum_users[0].status == 'open'}" title="Te doen"></span>
-                            <span class="fa fa-battery-half" ng-class="{selected: practicum.practicum_users[0].status == 'in_progress'}" title="Bezig"></span>
-                            <span class="fa fa-battery-full" ng-class="{selected: practicum.practicum_users[0].status == 'closed'}" title="Afgesloten"></span>
-                        <td><input value="{{practicum.question}}"  class="form-control input-sm" style="width: 90%;" ng-model="practicum.practicum_users[0].question" ng-blur="c.updateQuestion(practicum.practicum_users[0])" title="Formuleer hier je vraag"/></td>
+                            <span class="fa fa-battery-empty" ng-class="{selected: practicum.practicum_users[0].status == 'open'}" ng-click="c.updateState(practicum.practicum_users[0], 'open')" title="Te doen"></span>
+                            <span class="fa fa-battery-half" ng-class="{selected: practicum.practicum_users[0].status == 'in_progress'}"  ng-click="c.updateState(practicum.practicum_users[0], 'in_progress')" title="Bezig"></span>
+                            <span class="fa fa-battery-full" ng-class="{selected: practicum.practicum_users[0].status == 'closed'}" ng-click="c.updateState(practicum.practicum_users[0], 'closed')" title="Afgesloten"></span>
+                        <td><input value="{{practicum.question}}"  class="form-control input-sm" style="width: 90%;" ng-click="c.updateState(practicum.practicum_users[0], 'need_help')" title="Formuleer hier je vraag"/></td>
                         <td><a class="btn btn-default" ui-sref="practicum({id:practicum._id})">Details</a></td>
 
                     </tr>
