@@ -11,9 +11,13 @@ function all(req, res, next) {
 
         User.find({number : req.query.number}).exec(function (err, user) {
             if(err){return next(err);}
+
+            console.log(user);
             if(user[0]){
                 PracticumUser.find({user : user[0]._id}).exec(function (err, data) {
                     if(err){return next(err);}
+
+                    console.log(data);
 
                     query.practicum_users = { $in: data };
 
@@ -22,6 +26,7 @@ function all(req, res, next) {
                         populate: { path: 'user' }
                     }).exec(function (err, data) {
                         if(err){return next(err);}
+                        console.log(data);
                         res.json(data);
                     });
                 });
