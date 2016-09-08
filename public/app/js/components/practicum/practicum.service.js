@@ -3,7 +3,7 @@ module.exports = function(ResourceService, serviceBase){
         getPracticums: getPracticums,
         getPracticum: getPracticum,
         getUser: getUser,
-        updateState: updateState
+        update: update
     };
 
     function getPracticums(number) {
@@ -19,7 +19,6 @@ module.exports = function(ResourceService, serviceBase){
     }
 
     function update(practicumuser) {
-        console.log('user/');
         return ResourceService(serviceBase+'practicum_user/'+practicumuser._id).create(practicumuser);
     }
 };
