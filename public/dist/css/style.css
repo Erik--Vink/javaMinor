@@ -38,6 +38,6 @@ body, html {
 .statuses .selected {
   color: green; }
 .statuses :not(selected) {
-  color: #95A4A7; }
+  color: silver; }
 
 /*# sourceMappingURL=style.css.map */

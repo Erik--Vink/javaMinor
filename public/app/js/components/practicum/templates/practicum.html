@@ -13,9 +13,14 @@
                         <th>Naam</th>
                         <th>Status</th>
                     </tr>
-                    <tr ng-repeat="practicum_user in c.practicum.practicum_users | filter: user.group">
+                    <tr ng-repeat="practicum_user in c.practicum.practicum_users | filter: {group: user.group}">
                         <td>{{practicum_user.user.name}}</td>
-                        <td>{{practicum_user.status}}</td>
+                        <td class="statuses">
+                            <span class="fa fa-battery-empty" ng-class="{selected: practicum_user.status == 'open'}" title="Te doen"></span>
+                            <span class="fa fa-battery-half" ng-class="{selected: practicum_user.status == 'in_progress'}" title="Bezig"></span>
+                            <span class="fa fa-battery-full" ng-class="{selected: practicum_user.status == 'closed'}" title="Afgesloten"></span>
+                            <span class="fa fa-question" ng-class="{selected: practicum_user.status == 'need_help'}" title="Vraag"></span>
+                        </td>
                     </tr>
                 </table>
             </div>

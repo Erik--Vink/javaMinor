@@ -14,13 +14,13 @@
                         <th>Status</th>
                         <th></th>
                     </tr>
-                    <tr ng-repeat="practicum in c.practicums ">
+                    <tr ng-repeat="practicum in c.practicums">
                         <td>{{practicum.name}}</td>
                         <td class="statuses">
-                            <span class="fa fa-battery-empty" ng-class="{selected: practicum.practicum_users[0].status == 'open'}"></span>
-                            <span class="fa fa-battery-half" ng-class="{selected: practicum.practicum_users[0].status == 'in_progress'}"></span>
-                            <span class="fa fa-battery-full" ng-class="{selected: practicum.practicum_users[0].status == 'closed'}"></span>
-                            <span class="fa fa-question" ng-class="{selected: practicum.practicum_users[0].status == 'need_help'}"></span>
+                            <span class="fa fa-battery-empty" ng-class="{selected: practicum.practicum_users[0].status == 'open'}" title="Te doen"></span>
+                            <span class="fa fa-battery-half" ng-class="{selected: practicum.practicum_users[0].status == 'in_progress'}" title="Bezig"></span>
+                            <span class="fa fa-battery-full" ng-class="{selected: practicum.practicum_users[0].status == 'closed'}" title="Afgesloten"></span>
+                            <span class="fa fa-question" ng-class="{selected: practicum.practicum_users[0].status == 'need_help'}" title="Vraag"></span>
                         </td>
                         <td><a class="btn btn-default" ui-sref="practicum({id:practicum._id})">Details</a></td>
                     </tr>
